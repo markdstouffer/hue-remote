@@ -14,13 +14,13 @@ const blue =
     "transitiontime": 0
   }
 
-const setToColor = (col, tran) => 
+const setToColor = (col, tran, bright) => 
   (
     {
       "on": true,
       "xy": rgbToXY(col.r, col.g, col.b),
-      "bri": 254,
-      "transitiontime": tran
+      "bri": bright,
+      "transitiontime": tran * 10
     }
   )
 

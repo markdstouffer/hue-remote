@@ -7,7 +7,7 @@ export const setLight = async (color, id) => {
   const res = await axios.put(lightUrl, color, {
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': AUTH,
+        'Authorization': AUTH
       }
     })
   console.log(res)
@@ -18,8 +18,8 @@ export const getConfig = async () => {
   const res = await axios.get(CONFIG_URL,
   {
     headers: {
-      'Content-Type': 'application/json',
-      'Authorization': AUTH
+      'Authorization': `${AUTH}`,
+      'Access-Control-Allow-Credentials': true
     }
   })
   console.log(res)
